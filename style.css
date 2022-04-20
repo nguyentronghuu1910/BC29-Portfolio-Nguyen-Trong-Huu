@@ -77,9 +77,15 @@ header {
   top: 50%;
   transform: translateY(-50%);
 }
+.carousel-indicators li.active{
+  background-color: #35a22c;
+}
 .carousel-indicators li {
-  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50% !important;
   padding: 0 -80px;
+  
 }
 .carousel-caption h3 {
   font-size: 45px;
@@ -164,98 +170,142 @@ header {
 
 /* Available */
 
-.available_2 .overlay{
-  background: rgba(7,10,12,.72);
-}
-
-#available {
+#feature {
   background-image: url("./img/3.jpg");
-  background-position: center;
+  background-repeat: no-repeat;
+  background-position: canter;
   background-size: cover;
   background-attachment: fixed;
-  padding: 100px 0;
+  padding: 100px 0 120px;
+  position: relative;
 }
-.available__title {
-  color: white;
+#feature .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(7, 10, 12, 0.72);
+  z-index: 0;
 }
-
-.available__title h2 {
-  font-size: 36px;
+.feature__container {
+  position: relative;
+  z-index: 1;
 }
-
-.available__title p {
-  font-size: 14px;
-  margin: 15px 0 40px 0;
+.feature__heading {
+  max-width: 70%;
 }
-.aveilable__content .card {
-  background-color: rgb(171 171 171 / 41%);
+.feature__heading p {
+  color: #fff;
+  font-size: 16px;
 }
-
-.aveilable__content .card {
-  border-radius: 7px;
-  transition: all 0.5s;
+.feature__item {
+  padding: 40px 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  color: #fff;
+  transition: all 0.3s;
+  backdrop-filter: blur(3px);
 }
-
-.aveilable__content .card:hover {
-  border: 1px solid white;
+.feature__item:hover {
   background-color: black;
+  border: 1px solid #fff;
 }
-.aveilable__content .card .card-body h4 {
-  font-size: 20px;
-  font-weight: 700;
-  color: white;
-  padding: 20px 0;
-}
-
-.aveilable__content .card .card-body i {
-  font-size: 45px;
+.feature__item i {
   color: #35a22c;
-  padding-top: 13px;
+  font-size: 35px;
+  margin-bottom: 25px;
+}
+.feature__item p {
+  margin-top: 25px;
+  font-size: 15px;
 }
 
-.aveilable__content .card .card-body p {
-  color: white;
-  font-size: 14px;
-  padding-bottom: 27px;
+/* award */
+
+#award {
+  position: relative;
+  color: #585858;
+  padding: 70px 0;
 }
-
-/* Award */
-
-.award_bg{
-   background-image: url(./img/memphis_3.png); 
-  background-position: bottom left; 
-     background-repeat: no-repeat; 
-     background-size: 50% auto; 
-     width: 100%; 
-     height: 100%; 
+.award__bg {
+  background-image: url("./img/memphis_3.png");
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: 50% auto;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
-
-.award__left{
-  background: rgba(255,255,255,.25);
-    border-radius: 10px;
-    border: 1px solid rgba(255,255,255,.18);
-    backdrop-filter: blur(3px);
-    box-shadow: 0 0 30px 0 rgb(0 0 0 / 30%);
-    padding: 45px;
+.award__left {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 0 30px 0 rgb(0 0 0 / 30%);
+  padding: 45px;
 }
-
-.heading h2{
+.award__left h2 {
   font-size: 36px;
   line-height: 42px;
   color: #1a1d2d;
-  font-weight: 600;
+  font-weight: bold;
 }
-
-.heading p{
+.award__left p {
   color: #585858;
-    line-height: 24px;
-    font-size: 12px;
+  line-height: 24px;
+  font-size: 15px;
 }
-.thumb_fluid{
-  max-width: 100%;
-    height: auto;
+.award__right {
+  padding: 45px 0;
 }
-
-.award__right p{
-  font-size: 14px;
+.award__right p {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+/* footer */
+#footer {
+  background-color: #222;
+}
+.footer__social a {
+  text-decoration: none;
+  color: #aaa;
+}
+.footer__social a:nth-child(odd) {
+  margin: 0 10px;
+}
+.footer__social a i {
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  border-radius: 50%;
+  border: 1px solid #454545;
+  transition: all 0.5s;
+}
+.footer__social a:hover i {
+  text-decoration: none;
+  color: #35a22c;
+  border: 1px solid #35a22c;
+}
+.footer__copyright {
+  border-top: 1px solid #454545;
+  padding-top: 30px;
+  margin-top: 30px;
+}
+.footer__copyright p {
+  color: #aaa;
+  font-weight: 600;
+  font-size: 15px;
+}
+.footer__copyright p a {
+  text-decoration: none;
+  color: #aaa;
+}
+.footer__copyright p a:hover {
+  color: #35a22c;
 }
